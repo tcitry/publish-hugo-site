@@ -16,6 +16,7 @@ RUN apt-get -y update && \
     apt-get -y install hugo && \
     apt-get clean
 
-COPY entrypoint.sh /usr/bin/action
+COPY entrypoint.sh /
+RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["action"]
+ENTRYPOINT ["entrypoint.sh"]
