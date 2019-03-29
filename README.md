@@ -1,6 +1,6 @@
 # publish hugo site
 
-This action will use your master branch by default.
+This action will use your **master** branch by default.
 
 ## what the action do
 
