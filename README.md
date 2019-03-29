@@ -17,10 +17,10 @@ git push --force TARGET_REPO master:<Pages branch>
 
 ## ENV
 
-* HUGO_VERSION default "0.54.0"
-* TARGET_REPO default is your hugo source repo
-* CNAME default is xxx.github.io
-* args default is "master"
+* `HUGO_VERSION` default "0.54.0"
+* `TARGET_REPO` default is your hugo source repo
+* `CNAME` default is xxx.github.io
+* `args` default is "master"
 
 ## main.workflow example
 
