@@ -14,6 +14,7 @@ COPY LICENSE README.md /
 RUN apt-get -y update && \
     apt-get -y install git && \
     apt-get -y install hugo && \
+    apt-get -y install curl && \
     apt-get clean
 
 COPY entrypoint.sh /
