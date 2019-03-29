@@ -6,8 +6,8 @@ LABEL "homepage"="https://github.com/marketplace/actions/publish-hugo-site"
 
 LABEL "com.github.actions.name"="Publish Hugo Site"
 LABEL "com.github.actions.description"="Publish your hugo to master or other gh-pages"
-LABEL "com.github.actions.icon"="git-pull-request"
-LABEL "com.github.actions.color"="purple"
+LABEL "com.github.actions.icon"="book-open"
+LABEL "com.github.actions.color"="green"
 
 COPY LICENSE README.md /
 
@@ -19,4 +19,4 @@ RUN apt-get -y update && \
 COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
