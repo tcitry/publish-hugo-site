@@ -16,7 +16,7 @@ fi
 REMOTE_REPO="https://${TOKEN}@github.com/${TARGET_REPO}.git"
 cd "${GITHUB_WORKSPACE}" || exit 1
 rm -rf .git
-hugo
+hugo -v
 cd public
 git init
 git config user.name "${GITHUB_ACTOR}"
