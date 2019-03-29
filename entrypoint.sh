@@ -15,6 +15,7 @@ fi
 
 REMOTE_REPO="https://${TOKEN}@github.com/${TARGET_REPO}.git"
 cd "${GITHUB_WORKSPACE}" || exit 1
+git submodule update --init --recursive
 rm -rf .git
 hugo -v
 cd public
