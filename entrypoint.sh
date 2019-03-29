@@ -29,6 +29,12 @@ echo "hugo version is" && ./hugo version
 git submodule update --init --recursive
 rm -rf .git
 cd public
+
+if [ -z "${CNAME}" ]; then
+  echo "${GITHUB_ACTOR}.github.io" > CNAME
+fi
+echo ${CNAME} > CNAME
+
 git init
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
