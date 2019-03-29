@@ -31,9 +31,10 @@ rm -rf .git
 cd public
 
 if [ -z "${CNAME}" ]; then
-  echo "${GITHUB_ACTOR}.github.io" > CNAME
+    echo "${GITHUB_ACTOR}.github.io" > CNAME
+else
+    echo ${CNAME} > CNAME
 fi
-echo ${CNAME} > CNAME
 
 git init
 git config user.name "${GITHUB_ACTOR}"
