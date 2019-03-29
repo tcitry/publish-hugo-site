@@ -22,12 +22,12 @@ fi
 cd "${GITHUB_WORKSPACE}" || exit 1
 
 echo 'installing hugo'
-curl -sSL https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz > hugo.tar.gz && tar -f hugo.tar.gz -xz
+curl -sSL https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz > hugo.tar.gz && tar -zxvf hugo.tar.gz
+echo "hugo version is" && ./hugo version
+./hugo
 
 git submodule update --init --recursive
 rm -rf .git
-echo "hugo version is" && ./hugo version
-./hugo
 cd public
 git init
 git config user.name "${GITHUB_ACTOR}"
